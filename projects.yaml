@@ -1,0 +1,16 @@
+# Lista canônica de projetos para classificação automática de reuniões.
+# slug: identificador permanente (usado como nome de pasta no Drive e GitHub)
+# aliases: variações de nome que ajudam o classificador
+# description: contexto usado pelo Gemini para classificar
+
+- slug: certifier
+  name: Certifier
+  aliases: [motor certifier, API certifier, OCR certifier]
+  description: Motor de certificados, OCR, infra de assinatura digital
+
+- slug: meet-pipeline
+  name: Pipeline de Reuniões
+  aliases: [meet bot, processador de meets, pipeline meet, meet-ninja]
+  description: Processamento automatizado de reuniões do Google Meet
+
+# Adicione novos projetos abaixo seguindo o mesmo formato.

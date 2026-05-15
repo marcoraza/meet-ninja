@@ -1,6 +1,7 @@
 .codex/config.toml
 
 # Secrets and local config
+.DS_Store
 .env
 .env.*
 !.env.example

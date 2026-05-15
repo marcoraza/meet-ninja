@@ -1,16 +1,30 @@
 # Lista canônica de projetos para classificação automática de reuniões.
-# slug: identificador permanente (usado como nome de pasta no Drive e GitHub)
-# aliases: variações de nome que ajudam o classificador
-# description: contexto usado pelo Gemini para classificar
+# slug: identificador permanente (usado como nome de pasta no Drive e GitHub).
+# Mantém o nome do repo em marcoraza/<slug> sem modificar.
+# aliases: variações de nome que ajudam o classificador.
+# description: contexto usado pelo Gemini para classificar.
 
-- slug: certifier
-  name: Certifier
-  aliases: [motor certifier, API certifier, OCR certifier]
-  description: Motor de certificados, OCR, infra de assinatura digital
+- slug: certify-mvp
+  name: Certify
+  aliases: [certify, certifier, motor certify, API certify, matriz, NR12, análise documental]
+  description: MVP independente para análise documental e aderência de matrizes (NRs, certificados, validação por candidato).
 
-- slug: meet-pipeline
-  name: Pipeline de Reuniões
-  aliases: [meet bot, processador de meets, pipeline meet, meet-ninja]
-  description: Processamento automatizado de reuniões do Google Meet
+- slug: franciscon
+  name: Gui Franciscon
+  aliases: [franciscon, gui franciscon, dj franciscon, gestão franciscon, carreira franciscon]
+  description: Gestão e carreira do DJ Gui Franciscon. Reuniões sobre agenda, releases, branding e operação.
 
-# Adicione novos projetos abaixo seguindo o mesmo formato.
+- slug: mmd
+  name: MMD
+  aliases: [mmd]
+  description: Projeto MMD.
+
+- slug: forma
+  name: Forma Audio
+  aliases: [forma, forma audio, brand forma, identity forma, pitch forma]
+  description: Forma Audio, brand identity, sistema de logo e pitch deck.
+
+- slug: emili-zaremba
+  name: Emili Zaremba
+  aliases: [emili, zaremba, emili zaremba, dashboards emili, landing emili]
+  description: Emili Zaremba, dashboards, landing pages e ferramentas internas.

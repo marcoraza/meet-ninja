@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://meet-ninja.local/schemas/receipt.schema.json",
+  "title": "ProcessingReceipt",
+  "type": "object",
+  "required": ["receiptId", "sourceId", "sourceHash", "capturedAt", "pipelineVersion", "mode", "outputs", "proposedActions"],
+  "properties": {
+    "receiptId": { "type": "string", "minLength": 1 },
+    "sourceId": { "type": "string", "minLength": 1 },
+    "sourceHash": { "type": "string", "minLength": 16 },
+    "capturedAt": { "type": "string", "format": "date-time" },
+    "pipelineVersion": { "type": "string" },
+    "mode": {
+      "type": "string",
+      "enum": ["read", "dry_run", "propose", "write"]
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "path"],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": ["raw", "processed_json", "vault_markdown", "github_payload", "log"]
+          },
+          "path": { "type": "string" },
+          "hash": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "proposedActions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "target", "status"],
+        "properties": {
+          "kind": { "type": "string" },
+          "target": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["proposed", "approved", "applied", "rejected", "failed"]
+          }
+        }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

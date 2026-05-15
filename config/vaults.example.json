@@ -1,0 +1,11 @@
+{
+  "defaultVault": "",
+  "vaults": [
+    {
+      "name": "",
+      "root": "",
+      "meetingPathTemplate": "Meetings/{yyyy}/{yyyy-MM-dd}-{slug}.md"
+    }
+  ],
+  "writeRequiresConfirmation": true
+}

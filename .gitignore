@@ -1,0 +1,29 @@
+.codex/config.toml
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Dependencies and build output
+node_modules/
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+dist/
+build/
+
+# Local runtime data
+data/inbox/*
+data/processed/*
+data/exports/*
+!data/inbox/README.md
+!data/processed/README.md
+!data/exports/README.md
+
+# Diagnostics and scratch work
+claude-scripts/
+tmp/
+*.log
+.claude/settings.local.json

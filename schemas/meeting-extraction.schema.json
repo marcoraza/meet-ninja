@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://meet-ninja.local/schemas/meeting-extraction.schema.json",
+  "title": "MeetingExtraction",
+  "type": "object",
+  "required": ["sourceId", "title", "participants", "decisions", "actions", "risks", "openQuestions"],
+  "properties": {
+    "sourceId": { "type": "string", "minLength": 1 },
+    "title": { "type": "string" },
+    "date": { "type": ["string", "null"], "format": "date" },
+    "participants": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "topics": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "decisions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/evidenceItem" }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text", "owner", "dueDate", "confidence"],
+        "properties": {
+          "text": { "type": "string" },
+          "owner": { "type": ["string", "null"] },
+          "dueDate": { "type": ["string", "null"], "format": "date" },
+          "evidence": { "type": ["string", "null"] },
+          "confidence": { "$ref": "#/$defs/confidence" },
+          "githubDraft": {
+            "type": ["object", "null"],
+            "properties": {
+              "repo": { "type": ["string", "null"] },
+              "title": { "type": "string" },
+              "body": { "type": "string" },
+              "labels": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            },
+            "required": ["title", "body"]
+          }
+        }
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/evidenceItem" }
+    },
+    "openQuestions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/evidenceItem" }
+    },
+    "links": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" }
+    }
+  },
+  "$defs": {
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    },
+    "evidenceItem": {
+      "type": "object",
+      "required": ["text", "confidence"],
+      "properties": {
+        "text": { "type": "string" },
+        "evidence": { "type": ["string", "null"] },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      }
+    }
+  }
+}

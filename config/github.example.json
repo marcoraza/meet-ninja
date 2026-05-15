@@ -1,0 +1,7 @@
+{
+  "defaultOwner": "",
+  "defaultRepo": "",
+  "mode": "dry_run",
+  "allowedActions": ["render_issue", "render_comment"],
+  "writeRequiresConfirmation": true
+}

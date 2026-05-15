@@ -1,0 +1,7 @@
+{
+  "provider": "gmail",
+  "mode": "read",
+  "query": "from:(meet OR zoom OR calendar) newer_than:30d",
+  "allowedAttachmentTypes": ["text/plain", "text/vtt", "application/pdf"],
+  "mutateMailbox": false
+}

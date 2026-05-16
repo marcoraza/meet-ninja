@@ -19,6 +19,8 @@ build/
 data/inbox/*
 data/processed/*
 data/exports/*
+data/previews/
+data/receipts/
 !data/inbox/README.md
 !data/processed/README.md
 !data/exports/README.md

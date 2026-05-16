@@ -26,9 +26,21 @@ _RESPONSE_SCHEMA = {
 }
 
 
+_RETRY_OPTIONS = types.HttpRetryOptions(
+    attempts=5,
+    initial_delay=2.0,
+    max_delay=30.0,
+    exp_base=2.0,
+    jitter=1.0,
+)
+
+
 class GeminiClassifier:
     def __init__(self, api_key: str, model: str):
-        self._client = genai.Client(api_key=api_key)
+        self._client = genai.Client(
+            api_key=api_key,
+            http_options=types.HttpOptions(retry_options=_RETRY_OPTIONS),
+        )
         self._model = model
 
     def classify(

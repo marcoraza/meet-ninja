@@ -32,24 +32,35 @@ class Classification(BaseModel):
     reasoning: str = ""
 
 
-class RenderedOutput(BaseModel):
-    notes_filename: str
-    transcript_filename: str
-    notes_content: str
-    transcript_content: str
+class Enrichment(BaseModel):
+    title_descriptive: str
+    people: list[str] = []
+    transcript_clean_markdown: str = ""
+    executive_markdown: str = ""
+
+
+class RenderedArtifact(BaseModel):
+    filename: str
+    content: str
+    kind: Literal["sumario", "executivo", "transcricao-clean", "transcricao-bruta"]
+
+
+class RenderedBundle(BaseModel):
+    folder_path_parts: list[str]
+    artifacts: list[RenderedArtifact]
 
 
 class Receipt(BaseModel):
     receipt_id: str
     created_at: datetime
     source: MeetingSource
-    notes_hash: str
-    transcript_hash: Optional[str] = None
+    folder_path: str = ""
     classification: Classification
-    drive_notes_id: Optional[str] = None
-    drive_transcript_id: Optional[str] = None
-    github_notes_sha: Optional[str] = None
-    github_transcript_sha: Optional[str] = None
+    enrichment: Optional[Enrichment] = None
+    artifact_hashes: dict[str, str] = {}
+    drive_folder_id: Optional[str] = None
+    drive_file_ids: dict[str, str] = {}
+    github_file_shas: dict[str, str] = {}
     status: Literal["pending", "classified", "rendered", "published", "failed"] = "pending"
     error: Optional[str] = None
     dry_run: bool = True

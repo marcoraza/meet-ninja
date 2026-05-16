@@ -11,8 +11,13 @@ _TITLE_PEOPLE_SYSTEM = (
     "Você analisa anotações e transcrição de uma reunião e extrai dois dados: "
     "(1) um título descritivo curto da reunião, em português, com capitalização "
     "correta (palavras importantes em maiúscula, artigos/preposições em minúscula). "
-    "Máximo 70 caracteres, sem ponto final, sem aspas, sem datas, sem horários. "
-    "Foque no que foi discutido na conversa. "
+    "MÁXIMO 50 caracteres, sem ponto final, sem aspas, sem datas, sem horários. "
+    "Frase nominal curta, foco no TEMA central da conversa. Prefira descrever a "
+    "atividade (ex: 'Validação do Motor de Compliance') a nomear produtos.\n"
+    "REGRA DE NOMES (estrita): NUNCA invente nome de produto ou variação. Se um "
+    "nome canônico de projeto for fornecido, use exatamente como está, OU não "
+    "mencione o produto e descreva só a atividade. Não derive 'Certifier' de "
+    "'Certify' nem invente sufixos. Em dúvida, omita o nome do produto.\n"
     "(2) lista de pessoas reais que participaram, com primeiro nome ou nome curto. "
     "Renomeie 'Off Digital' para 'Marco'. Se o speaker aparecer só como 'Eu' ou "
     "'Speaker 1', omita. Use o nome real quando aparecer no diálogo. "
@@ -99,13 +104,22 @@ class GeminiEnricher:
         notes_markdown: str,
         transcript_markdown: Optional[str],
         gmail_subject: str,
+        project: Optional[Project] = None,
     ) -> tuple[str, list[str]]:
         transcript_excerpt = (transcript_markdown or "")[:8000]
+        if project is not None:
+            project_line = (
+                f"NOME CANÔNICO DO PROJETO (use exatamente assim ou omita): "
+                f"{project.name}\n\n"
+            )
+        else:
+            project_line = "PROJETO: não identificado (não mencione produto no título)\n\n"
         prompt = (
+            f"{project_line}"
             f"ASSUNTO ORIGINAL DO E-MAIL: {gmail_subject}\n\n"
             f"ANOTAÇÕES DA REUNIÃO:\n{notes_markdown[:6000]}\n\n"
             f"TRECHO DA TRANSCRIÇÃO:\n{transcript_excerpt}\n\n"
-            "Extraia title (descritivo) e people (lista de nomes)."
+            "Extraia title (máx 50 chars, descritivo) e people (lista de nomes)."
         )
         response = self._client.models.generate_content(
             model=self._model,

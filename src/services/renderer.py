@@ -52,12 +52,15 @@ def month_folder(meeting_dt: datetime) -> str:
 
 def meeting_folder_name(meeting_dt: datetime, title_descriptive: str, people: list[str]) -> str:
     day = f"{meeting_dt.day:02d}"
-    title = sanitize_for_path(title_descriptive, max_len=70)
+    title = sanitize_for_path(title_descriptive, max_len=50)
     if people:
-        people_str = ", ".join(people[:5])
-        people_str = sanitize_for_path(people_str, max_len=60)
-        return sanitize_for_path(f"{day} - {title} - {people_str}", max_len=140)
-    return sanitize_for_path(f"{day} - {title}", max_len=140)
+        head = people[:3]
+        people_str = ", ".join(head)
+        if len(people) > 3:
+            people_str += f" +{len(people) - 3}"
+        people_str = sanitize_for_path(people_str, max_len=40)
+        return sanitize_for_path(f"{day} - {title} - {people_str}", max_len=100)
+    return sanitize_for_path(f"{day} - {title}", max_len=100)
 
 
 def _yaml_escape(value: str) -> str:

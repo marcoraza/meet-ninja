@@ -137,15 +137,16 @@ def _process_one(
             confidence=classification.confidence,
         )
 
-        title, people = enricher.extract_title_and_people(notes_md, transcript_md, subject)
+        project_obj = next(
+            (p for p in projects if p.slug == classification.project_slug), None
+        )
+        title, people = enricher.extract_title_and_people(
+            notes_md, transcript_md, subject, project_obj
+        )
         log.info("enriched_title_people", receipt_id=receipt_id, title=title, people=people)
 
         transcript_raw = transcript_md or _extract_transcription_section(notes_md)
         clean = enricher.clean_transcript(transcript_raw, people) if transcript_raw.strip() else ""
-
-        project_obj = next(
-            (p for p in projects if p.slug == classification.project_slug), None
-        )
         executive = enricher.executive_summary(notes_md, clean, title, project_obj, people)
 
         enrichment = Enrichment(

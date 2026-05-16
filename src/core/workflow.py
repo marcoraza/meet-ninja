@@ -250,7 +250,7 @@ def _publish_github(
 
 
 def _write_preview(bundle: RenderedBundle, receipt_id: str, data_dir: Path) -> None:
-    preview_dir = data_dir / "previews" / receipt_id
+    preview_dir = data_dir / "previews"
     for part in bundle.folder_path_parts:
         preview_dir = preview_dir / part
     preview_dir.mkdir(parents=True, exist_ok=True)

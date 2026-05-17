@@ -5,6 +5,7 @@ confidence: 0.95
 title: "Definição de Identidade Visual e Estratégia"
 meeting_datetime: 2026-04-24T11:51:00
 people: ["Guilherme Franciscon", "Marco", "Mateus", "Van"]
+tags: [kind/transcricao-clean, projeto/franciscon, pessoa/guilherme-franciscon, pessoa/marco, pessoa/mateus, pessoa/van]
 gmail_message_id: 19dc05ab10cfd95b
 gmail_thread_id: 19dc05ab10cfd95b
 notes_doc_id: 1bCIze0lZgkwKX4akUoGXemetlXAXaF9GnVrVr2v3iGQ

@@ -5,6 +5,7 @@ confidence: 1.00
 title: "Estruturação Técnica do Motor Certify"
 meeting_datetime: 2026-04-27T14:43:00
 people: ["Marco", "Marcelo"]
+tags: [kind/sumario, projeto/certify-mvp, pessoa/marco, pessoa/marcelo]
 gmail_message_id: 19dd0a32fb659105
 gmail_thread_id: 19dd0a32fb659105
 notes_doc_id: 18LXdp-LgfwGcQdpvhADyueJ6D_1jUVOfkUcOK2t8Qq8

@@ -5,6 +5,7 @@ confidence: 1.00
 title: "Revisão de Matrizes e Padronização do Certify"
 meeting_datetime: 2026-04-23T15:40:00
 people: ["Marco", "Marcelo", "Cláudio"]
+tags: [kind/transcricao-clean, projeto/certify-mvp, pessoa/marco, pessoa/marcelo, pessoa/claudio]
 gmail_message_id: 19dbc211085d2e8f
 gmail_thread_id: 19dbc211085d2e8f
 notes_doc_id: 1QShuJR6_6PSduwy4GEKtYH_cTLYbrZNHv5SpfoGksQ4

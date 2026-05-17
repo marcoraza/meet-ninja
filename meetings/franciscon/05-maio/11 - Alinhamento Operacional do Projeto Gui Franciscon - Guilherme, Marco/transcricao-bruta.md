@@ -5,6 +5,7 @@ confidence: 0.95
 title: "Alinhamento Operacional do Projeto Gui Franciscon"
 meeting_datetime: 2026-05-11T18:54:00
 people: ["Guilherme", "Marco"]
+tags: [kind/transcricao-bruta, projeto/franciscon, pessoa/guilherme, pessoa/marco]
 gmail_message_id: 19e195e0197cac21
 gmail_thread_id: 19e195e0197cac21
 notes_doc_id: 1W4lDXdjSoh6zbH4C5IeRaJ6YiqGFh8NM8hW5HoZhfHM

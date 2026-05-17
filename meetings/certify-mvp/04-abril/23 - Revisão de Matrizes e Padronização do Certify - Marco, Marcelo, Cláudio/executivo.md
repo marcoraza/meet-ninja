@@ -5,6 +5,7 @@ confidence: 1.00
 title: "Revisão de Matrizes e Padronização do Certify"
 meeting_datetime: 2026-04-23T15:40:00
 people: ["Marco", "Marcelo", "Cláudio"]
+tags: [kind/executivo, projeto/certify-mvp, pessoa/marco, pessoa/marcelo, pessoa/claudio]
 gmail_message_id: 19dbc211085d2e8f
 gmail_thread_id: 19dbc211085d2e8f
 notes_doc_id: 1QShuJR6_6PSduwy4GEKtYH_cTLYbrZNHv5SpfoGksQ4
@@ -13,7 +14,7 @@ notes_doc_id: 1QShuJR6_6PSduwy4GEKtYH_cTLYbrZNHv5SpfoGksQ4
 # Executivo: Revisão de Matrizes e Padronização do Certify
 
 **Projeto:** certify-mvp  
-**Participantes:** Marco, Marcelo, Cláudio  
+**Participantes:** [[Marco]], [[Marcelo]], [[Cláudio]]  
 **Data:** 23/04/2026 15:40
 
 ## Contexto
@@ -28,12 +29,12 @@ A equipe busca profissionalizar a estrutura de dados para evitar que usuários c
 *   Padronizou-se o campo de validade para entrada de tempo (ex: 1 ano, 5 anos) em substituição ao formato de *checkbox*.
 
 ## Ações
-- [ ] Atualizar base de normas e documentos faltantes (responsável: Marco, prazo: sem prazo)
-- [ ] Desenvolver motor de IA para classificação de matrizes e unificação de nomenclatura (responsável: Marco, prazo: 5 a 7 dias)
-- [ ] Montar matriz de teste com 50 documentos da Hélix para validar o motor (responsável: Marcelo, prazo: sem prazo)
-- [ ] Coletar modelos oficiais de documentos (NR3, NR34, OPIT, STCW) para alimentar a base (responsável: Marcelo, prazo: sem prazo)
-- [ ] Ajustar sistema e conectar back-end para verificação de status (pendente/aprovado) (responsável: Marco, prazo: sem prazo)
-- [ ] Definir estrutura de categorização "guarda-chuva" com Cláudio (responsável: Marco, prazo: sem prazo)
+- [ ] Atualizar base de normas e documentos faltantes (responsável: [[Marco]], prazo: sem prazo)
+- [ ] Desenvolver motor de IA para classificação de matrizes e unificação de nomenclatura (responsável: [[Marco]], prazo: 5 a 7 dias)
+- [ ] Montar matriz de teste com 50 documentos da Hélix para validar o motor (responsável: [[Marcelo]], prazo: sem prazo)
+- [ ] Coletar modelos oficiais de documentos (NR3, NR34, OPIT, STCW) para alimentar a base (responsável: [[Marcelo]], prazo: sem prazo)
+- [ ] Ajustar sistema e conectar back-end para verificação de status (pendente/aprovado) (responsável: [[Marco]], prazo: sem prazo)
+- [ ] Definir estrutura de categorização "guarda-chuva" com [[Cláudio]] (responsável: [[Marco]], prazo: sem prazo)
 
 ## Próximos passos
 *   Finalizar a atualização da interface de matrizes no ambiente de desenvolvimento.

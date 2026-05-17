@@ -5,6 +5,7 @@ confidence: 1.00
 title: "Validação do Motor de Certificação Certify"
 meeting_datetime: 2026-05-04T16:35:00
 people: ["Marco", "Marcelo Costa"]
+tags: [kind/transcricao-bruta, projeto/certify-mvp, pessoa/marco, pessoa/marcelo-costa]
 gmail_message_id: 19df4e030b4e77be
 gmail_thread_id: 19df4e030b4e77be
 notes_doc_id: 1M-xnR28LCgtgWt5jdAkh-Y7u3ExUdfXZOrme4UF18Hg

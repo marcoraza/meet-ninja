@@ -5,6 +5,7 @@ confidence: 0.95
 title: "Alinhamento Técnico do Projeto Certify"
 meeting_datetime: 2026-05-12T14:00:00
 people: ["Marcelo", "Marco", "Dá", "Letícia", "Nil", "Sandoval", "Fernando"]
+tags: [kind/transcricao-clean, projeto/certify-mvp, pessoa/marcelo, pessoa/marco, pessoa/da, pessoa/leticia, pessoa/nil, pessoa/sandoval, pessoa/fernando]
 gmail_message_id: 19e1e322bff85b51
 gmail_thread_id: 19e1e322bff85b51
 notes_doc_id: 1fz5bVg-jiuh7PLPtiTGGQ6s-5kih-xKUocnzfJap-a4

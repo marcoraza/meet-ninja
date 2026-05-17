@@ -5,6 +5,7 @@ confidence: 0.85
 title: "Melhorias Técnicas e Operacionais no Certify"
 meeting_datetime: 2026-05-07T11:01:00
 people: ["Marco", "Marcelo", "Letícia"]
+tags: [kind/transcricao-clean, projeto/certify-mvp, pessoa/marco, pessoa/marcelo, pessoa/leticia]
 gmail_message_id: 19e033e6a64bb72b
 gmail_thread_id: 19e033e6a64bb72b
 notes_doc_id: 1KjxNAgjB7UXaeFcgIPoS-QIlPQFY54wRmS_IztNha4s

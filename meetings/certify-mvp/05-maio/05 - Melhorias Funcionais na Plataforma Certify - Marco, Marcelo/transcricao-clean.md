@@ -5,6 +5,7 @@ confidence: 0.95
 title: "Melhorias Funcionais na Plataforma Certify"
 meeting_datetime: 2026-05-05T14:22:00
 people: ["Marco", "Marcelo"]
+tags: [kind/transcricao-clean, projeto/certify-mvp, pessoa/marco, pessoa/marcelo]
 gmail_message_id: 19df9c05ef7cfa28
 gmail_thread_id: 19df9c05ef7cfa28
 notes_doc_id: 1oyZ13oacGblJtlLEUdVaY0sBClMfRJCFnmyS4UGVjws

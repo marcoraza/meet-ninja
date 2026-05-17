@@ -5,6 +5,7 @@ confidence: 0.00
 title: "Teste da Ferramenta de Transcrição"
 meeting_datetime: 2026-05-14T14:21:00
 people: ["Marco"]
+tags: [kind/transcricao-bruta, projeto/unknown, pessoa/marco]
 gmail_message_id: 19e2793257223acc
 gmail_thread_id: 19e2793257223acc
 notes_doc_id: 1QAU_0RX0FQmfP3LZMJBKjrlhGNI1RhKISBXg2-hp6TQ

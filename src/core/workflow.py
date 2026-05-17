@@ -247,7 +247,46 @@ def _publish_github(
         path = f"meetings/{base}/{artifact.filename}"
         msg = f"meet-ninja: add {artifact.filename} ({base})"
         shas[artifact.kind] = github.put_file(path, artifact.content, msg)
+    project_slug = bundle.folder_path_parts[0]
+    try:
+        _rebuild_project_index(github, project_slug)
+    except Exception as idx_exc:
+        log.warning("project_index_failed", slug=project_slug, error=str(idx_exc))
     return shas
+
+
+def _rebuild_project_index(github: GitHubClient, project_slug: str) -> None:
+    """Regera meetings/<slug>/index.md listando todas as reunioes do projeto."""
+    project_root = f"meetings/{project_slug}"
+    entries: list[tuple[str, str, str]] = []
+    for month_entry in github.list_dir(project_root):
+        if month_entry.get("type") != "dir":
+            continue
+        month_path = month_entry["path"]
+        month_name = month_entry["name"]
+        for meeting_entry in github.list_dir(month_path):
+            if meeting_entry.get("type") != "dir":
+                continue
+            entries.append((month_name, meeting_entry["name"], meeting_entry["path"]))
+    entries.sort(key=lambda e: (e[0], e[1]), reverse=True)
+    lines = [f"# {project_slug}", "", f"Total de reuniões: {len(entries)}", ""]
+    current_month: Optional[str] = None
+    for month, meeting, _path in entries:
+        if month != current_month:
+            if current_month is not None:
+                lines.append("")
+            lines.append(f"## {month}")
+            lines.append("")
+            current_month = month
+        executivo_link = f"{month}/{meeting}/executivo.md"
+        lines.append(f"- [{meeting}](<{executivo_link}>)")
+    lines.append("")
+    content = "\n".join(lines)
+    github.put_file(
+        f"{project_root}/index.md",
+        content,
+        f"meet-ninja: rebuild index ({project_slug})",
+    )
 
 
 def _write_preview(bundle: RenderedBundle, receipt_id: str, data_dir: Path) -> None:

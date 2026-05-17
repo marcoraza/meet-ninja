@@ -76,6 +76,9 @@ def _frontmatter(
     content: MeetingContent,
 ) -> str:
     when = content.meeting_datetime or source.received_at
+    tags = [f"kind/{kind}", f"projeto/{classification.project_slug}"]
+    for person in enrichment.people:
+        tags.append(f"pessoa/{slugify_ascii(person, max_len=40)}")
     lines = [
         "---",
         f"kind: {kind}",
@@ -84,6 +87,7 @@ def _frontmatter(
         f"title: {_yaml_escape(enrichment.title_descriptive)}",
         f"meeting_datetime: {when.isoformat()}",
         f"people: [{', '.join(_yaml_escape(p) for p in enrichment.people)}]",
+        f"tags: [{', '.join(tags)}]",
         f"gmail_message_id: {source.gmail_message_id}",
         f"gmail_thread_id: {source.gmail_thread_id}",
         f"notes_doc_id: {source.notes_doc_id}",
@@ -92,6 +96,25 @@ def _frontmatter(
         lines.append(f"transcript_doc_id: {source.transcript_doc_id}")
     lines.append("---")
     return "\n".join(lines) + "\n\n"
+
+
+def _wikilink_people(text: str, people: list[str]) -> str:
+    """Substitui menções de pessoas por [[Pessoa]] em texto markdown.
+    Conservador: só substitui ocorrência exata como palavra inteira, fora de blocos
+    já linkados ou de URLs. Ordena por tamanho decrescente pra evitar match parcial
+    (ex: 'Marcelo Costa' antes de 'Marcelo')."""
+    if not people:
+        return text
+    sorted_people = sorted(set(people), key=len, reverse=True)
+    for person in sorted_people:
+        if not person.strip():
+            continue
+        escaped = re.escape(person)
+        pattern = re.compile(
+            rf"(?<![\[\w]){escaped}(?![\w\]])",
+        )
+        text = pattern.sub(f"[[{person}]]", text)
+    return text
 
 
 def _render_sumario(
@@ -115,12 +138,14 @@ def _render_executivo(
     source: MeetingSource,
 ) -> str:
     fm = _frontmatter("executivo", classification, enrichment, source, content)
+    participantes_linked = ", ".join(f"[[{p}]]" for p in enrichment.people) or "não identificados"
+    executive_body = _wikilink_people(enrichment.executive_markdown.strip(), enrichment.people)
     body = (
         f"# Executivo: {enrichment.title_descriptive}\n\n"
         f"**Projeto:** {classification.project_slug}  \n"
-        f"**Participantes:** {', '.join(enrichment.people) or 'não identificados'}  \n"
+        f"**Participantes:** {participantes_linked}  \n"
         f"**Data:** {(content.meeting_datetime or source.received_at).strftime('%d/%m/%Y %H:%M')}\n\n"
-        f"{enrichment.executive_markdown.strip()}\n"
+        f"{executive_body}\n"
     )
     return fm + body
 

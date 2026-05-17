@@ -46,6 +46,15 @@ class GitHubClient:
         data = yaml.safe_load(raw) or []
         return [Project(**item) for item in data]
 
+    def list_dir(self, path: str, ref: str = "main") -> list[dict]:
+        url = f"{_API}/repos/{self._repo}/contents/{path}"
+        resp = self._session.get(url, params={"ref": ref}, timeout=30)
+        if resp.status_code == 404:
+            return []
+        resp.raise_for_status()
+        data = resp.json()
+        return data if isinstance(data, list) else []
+
     def put_file(
         self,
         path: str,

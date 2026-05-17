@@ -20,6 +20,7 @@ data/inbox/*
 data/processed/*
 data/exports/*
 data/previews/
+data/previews-vps/
 data/receipts/
 !data/inbox/README.md
 !data/processed/README.md

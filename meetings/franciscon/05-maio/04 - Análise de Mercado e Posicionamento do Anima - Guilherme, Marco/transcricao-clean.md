@@ -5,6 +5,7 @@ confidence: 0.95
 title: "Análise de Mercado e Posicionamento do Anima"
 meeting_datetime: 2026-05-04T18:33:00
 people: ["Guilherme", "Marco"]
+tags: [kind/transcricao-clean, projeto/franciscon, pessoa/guilherme, pessoa/marco]
 gmail_message_id: 19df4fc55a460bd4
 gmail_thread_id: 19df4fc55a460bd4
 notes_doc_id: 1fKpWGwd3_EnQVR6Tmg-bZfOAN315VC7zB5JVyslpIO0

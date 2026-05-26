@@ -1,9 +1,10 @@
 # certify-mvp
 
-Total de reuniões: 6
+Total de reuniões: 7
 
 ## 05-maio
 
+- [26 - Reestruturação Técnica do Certify - Marco, Marcelo](<05-maio/26 - Reestruturação Técnica do Certify - Marco, Marcelo/executivo.md>)
 - [12 - Alinhamento Técnico do Projeto Certify - Marcelo, Marco, Dá +4](<05-maio/12 - Alinhamento Técnico do Projeto Certify - Marcelo, Marco, Dá +4/executivo.md>)
 - [07 - Melhorias Técnicas e Operacionais no Certify - Marco, Marcelo, Letícia](<05-maio/07 - Melhorias Técnicas e Operacionais no Certify - Marco, Marcelo, Letícia/executivo.md>)
 - [05 - Melhorias Funcionais na Plataforma Certify - Marco, Marcelo](<05-maio/05 - Melhorias Funcionais na Plataforma Certify - Marco, Marcelo/executivo.md>)

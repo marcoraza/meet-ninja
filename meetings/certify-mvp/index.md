@@ -1,6 +1,10 @@
 # certify-mvp
 
-Total de reuniões: 7
+Total de reuniões: 8
+
+## 06-junho
+
+- [11 - Validação Técnica e Configuração do Certify - Marcelo, Marco, Letícia +1](<06-junho/11 - Validação Técnica e Configuração do Certify - Marcelo, Marco, Letícia +1/executivo.md>)
 
 ## 05-maio
 

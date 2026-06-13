@@ -1,10 +1,11 @@
 # certify-mvp
 
-Total de reuniões: 8
+Total de reuniões: 9
 
 ## 06-junho
 
 - [11 - Validação Técnica e Configuração do Certify - Marcelo, Marco, Letícia +1](<06-junho/11 - Validação Técnica e Configuração do Certify - Marcelo, Marco, Letícia +1/executivo.md>)
+- [09 - Otimização da Matriz de Conformidade no Certify - Marco, Marcelo](<06-junho/09 - Otimização da Matriz de Conformidade no Certify - Marco, Marcelo/executivo.md>)
 
 ## 05-maio
 

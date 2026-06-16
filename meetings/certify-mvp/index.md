@@ -1,9 +1,10 @@
 # certify-mvp
 
-Total de reuniões: 9
+Total de reuniões: 10
 
 ## 06-junho
 
+- [16 - Alinhamento Estratégico do Projeto Certify - Marco, Marcelo Costa](<06-junho/16 - Alinhamento Estratégico do Projeto Certify - Marco, Marcelo Costa/executivo.md>)
 - [11 - Validação Técnica e Configuração do Certify - Marcelo, Marco, Letícia +1](<06-junho/11 - Validação Técnica e Configuração do Certify - Marcelo, Marco, Letícia +1/executivo.md>)
 - [09 - Otimização da Matriz de Conformidade no Certify - Marco, Marcelo](<06-junho/09 - Otimização da Matriz de Conformidade no Certify - Marco, Marcelo/executivo.md>)
 

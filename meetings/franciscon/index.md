@@ -1,6 +1,10 @@
 # franciscon
 
-Total de reuniões: 4
+Total de reuniões: 5
+
+## 06-junho
+
+- [26 - Padronização de Fluxos no Gui Franciscon - Guilherme, Marco, Mateus +2](<06-junho/26 - Padronização de Fluxos no Gui Franciscon - Guilherme, Marco, Mateus +2/executivo.md>)
 
 ## 05-maio
 

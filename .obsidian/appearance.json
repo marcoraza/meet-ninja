@@ -1,0 +1,10 @@
+{
+  "baseFontSize": 16,
+  "cssTheme": "Minimal",
+  "theme": "obsidian",
+  "showViewHeader": false,
+  "nativeMenus": true,
+  "enabledCssSnippets": [
+    "hide-repo-folders"
+  ]
+}

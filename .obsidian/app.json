@@ -1,0 +1,30 @@
+{
+  "showLineNumber": false,
+  "showInlineTitle": true,
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "attachmentFolderPath": "_attachments",
+  "propertiesInDocument": "hidden",
+  "userIgnoreFilters": [
+    "^adr",
+    "^config",
+    "^data",
+    "^docs",
+    "^evals",
+    "^ops",
+    "^prompts",
+    "^schemas",
+    "^specs",
+    "^src",
+    "^tasks",
+    "^tests",
+    "^claude-scripts",
+    "^AGENTS\\.md$",
+    "^README\\.md$",
+    "^projects\\.yaml$",
+    "^requirements\\.txt$",
+    "^\\.env\\.example$"
+  ]
+}

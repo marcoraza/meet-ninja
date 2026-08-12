@@ -1,6 +1,10 @@
 # unknown
 
-Total de reuniões: 2
+Total de reuniões: 3
+
+## 08-agosto
+
+- [12 - Análise de Infraestrutura e Desempenho de Bots - Marco](<08-agosto/12 - Análise de Infraestrutura e Desempenho de Bots - Marco/executivo.md>)
 
 ## 05-maio
 
